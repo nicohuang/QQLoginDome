@@ -16,6 +16,7 @@ public class BaseUiListener implements IUiListener
     {
         JSONObject object = (JSONObject)o;
         doComplete(object);
+        System.out.println("进来");
     }
     //在这里可以做一些登录成功的处理
     protected void doComplete(JSONObject values)
