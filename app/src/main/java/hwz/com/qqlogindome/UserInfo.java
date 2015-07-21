@@ -1,9 +1,14 @@
 package hwz.com.qqlogindome;
 
+import android.content.Context;
+
+import com.tencent.connect.auth.QQToken;
+import com.tencent.tauth.IUiListener;
+
 /**
  * Created by jan on 15/7/13.
  */
-public class UserInfo
+public class UserInfo extends com.tencent.connect.UserInfo
 {
     private int ret;
     private String pay_token;
@@ -14,9 +19,15 @@ public class UserInfo
     private String msg;
     private String access_token;
 
-    public UserInfo()
+    public UserInfo(Context context, QQToken qqToken)
     {
+        super(context, qqToken);
+    }
 
+    @Override
+    public void getUserInfo(IUiListener iUiListener)
+    {
+        super.getUserInfo(iUiListener);
     }
 
     public int getRet()
