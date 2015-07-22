@@ -24,12 +24,12 @@ public class BaseUiListener implements IUiListener
     {
         JSONObject object = (JSONObject)o;
         doComplete(object);
-        System.out.println("进来");
+        System.out.println("登陆成功");
     }
     //在这里可以做一些登录成功的处理
     protected void doComplete(JSONObject values)
     {
-
+        //获取用户资料
         com.tencent.connect.UserInfo userInfo = new UserInfo(context,MainActivity.mTencent.getQQToken());
         userInfo.getUserInfo(new UserInfoUiLIstener());
     }
@@ -37,13 +37,13 @@ public class BaseUiListener implements IUiListener
     @Override
     public void onError(UiError e)
     {
-
+        System.out.println("登陆失败");
     }
     //在这里可以做登录被取消的处理
     @Override
     public void onCancel()
     {
-
+        System.out.println("取消登陆");
     }
 }
 
