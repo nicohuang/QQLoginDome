@@ -14,7 +14,7 @@ public class MainActivity extends Activity
 {
     public static Tencent mTencent;
     //这里的APP_ID请换成你应用申请的APP_ID
-    private String APPID = "1104701805";
+    private String APPID = "222222";
     private Button btnLogin;
     BaseUiListener baseUiListener;
 
